@@ -46,10 +46,10 @@ A second printer, a Printrbot Plus on an SKR Mini E3 V3.0, stays on Marlin until
    - Tune Pressure Advance carefully
    - Preserve the existing good direct-drive extruder setup
 
-5. **X-axis direction**
-   - Invert the X motor from Marlin (`dir_pin: !PB12`) so G-code +X is the slicer's +X
-   - The switch stays on the same physical end of the axis. That end is X max (`position_endstop: 152.4`), so homing still travels into the switch
-   - Positive X then jogs toward the switch. A test print with text confirms the mirror is gone
+5. **Axis direction**
+   - X and Y are both reversed from the first Klipper setup so a slice rotates 180° and matches the Cura view. Reversing only one axis would mirror the part.
+   - Each switch stays on its same physical end. X homes to 0 (`dir_pin: PB12`, `position_endstop: 0`). Y homes to 152.4 (`dir_pin: !PB2`, `position_endstop: 152.4`). Homing still travels into the switch.
+   - After the change, +X jogs away from the X switch and +Y jogs toward the Y switch. Confirm that with a short jog before the first home.
 
 ## Deliverables for This Project
 

@@ -11,7 +11,7 @@ Nothing has been flashed. `printer.cfg` is a baseline for the Simple Metal:
 - SKR Mini E3 V2.0, one Z motor
 - Travel 152.4 mm (6 inches) on X, Y, and Z
 - Hotend `smooth_time: 3.0` and `max_temp: 270`
-- X motor direction is reversed from Marlin, and X homes to 152.4 at the switch. G-code +X matches the slicer, so slices do not need to be mirrored.
+- X and Y are both reversed from the first Klipper setup, a 180° rotation so the Cura view matches the machine. X homes to 0 at its switch. Y homes to 152.4 at its switch. Slices stay unmirrored.
 
 Steps/mm, PID, and the probe offset were copied from the surviving Marlin file. That file had been resaved for the Plus. An `M503` from the Simple Metal replaces any value that disagrees.
 
